@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alura Space</title>
+    <title>Andrade - GalleryF1</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
 <body>
     <div class="pagina-inicial">
         <header class="cabecalho">
-            <img src="{% static '/assets/logo/Logo(2).png' %}" alt="Logo da Alura Space" />
+            <img class="cabecalho__img" src="{% static '/assets/logo/formula-1-logo2.png' %}" alt="Logo da Formula 1" />
             <div class="cabecalho__busca">
                 <div class="busca__fundo">
                     <input class="busca__input" type="text" placeholder="O que você procura?">
@@ -35,16 +35,16 @@
             </section>
             <section class="conteudo">
                 <section class="banner">
-                    <img class="banner__imagem" src="{% static '/assets/imagens/Banner(2).png' %}" alt="banner Alura Space">
-                    <h1 class="banner__titulo"> A galeria mais completa de fotos do espaço!</h1>
+                    <img class="banner__imagem" src="{% static '/assets/imagens/banner-f12.png' %}" alt="banner Formula 1">
+                    <h1 class="banner__titulo"> Galeria de fotos da Fórmula 1!</h1>
                 </section>
                 <section class="tags">
                     <p class="tags__titulo">Busque por tags:</p>
                     <ul class="tags__lista">
-                        <li class="tags__tag">Nebulosa</li>
-                        <li class="tags__tag">Estrela</li>
-                        <li class="tags__tag">Galáxia</li>
-                        <li class="tags__tag">Planeta</li>
+                        <li class="tags__tag">Aston Martin</li>
+                        <li class="tags__tag">Ferrari</li>
+                        <li class="tags__tag">Mercedes</li>
+                        <li class="tags__tag">Red Bull</li>
                     </ul>
                 </section>
                 <section class="galeria">
@@ -53,13 +53,13 @@
                         <ul class="cards__lista">
                             <li class="card">
                                 <a href="imagem.html">
-                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/carina-nebula.png' %}" alt="foto">
+                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/mercedes-w14-frente.png' %}" alt="foto">
                                 </a>
-                                <span class="card__tag">Estrelas</span>
+                                <span class="card__tag">Mercedes</span>
                                 <div class="card__info">
                                     <p class="card__titulo">Nome da foto</p>
                                     <div class="card__texto">
-                                        <p class="card__descricao">Fonte/fotógrafo/satélite</p>
+                                        <p class="card__descricao">Fonte/Formula 1 Oficial/F1</p>
                                         <span>
                                             <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
                                         </span>
@@ -68,13 +68,13 @@
                             </li>
                             <li class="card">
                                 <a href="imagem.html">
-                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/carina-nebula.png' %}" alt="foto">
+                                    <img class="card__imagem" src="{% static '/assets/imagens/galeri/ferrari-sf75.png' %}" alt="foto">
                                 </a>
-                                <span class="card__tag">Estrelas</span>
+                                <span class="card__tag">Tag</span>
                                 <div class="card__info">
                                     <p class="card__titulo">Nome da foto</p>
                                     <div class="card__texto">
-                                        <p class="card__descricao">Fonte/fotógrafo/satélite</p>
+                                        <p class="card__descricao">Fonte/Formula 1 Oficial/F1</p>
                                         <span>
                                             <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
                                         </span>
@@ -83,13 +83,13 @@
                             </li>
                             <li class="card">
                                 <a href="imagem.html">
-                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/carina-nebula.png' %}" alt="foto">
+                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/' %}" alt="foto">
                                 </a>
-                                <span class="card__tag">Estrelas</span>
+                                <span class="card__tag">Tag</span>
                                 <div class="card__info">
                                     <p class="card__titulo">Nome da foto</p>
                                     <div class="card__texto">
-                                        <p class="card__descricao">Fonte/fotógrafo/satélite</p>
+                                        <p class="card__descricao">Fonte/Formula 1 Oficial/F1</p>
                                         <span>
                                             <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
                                         </span>
@@ -98,13 +98,13 @@
                             </li>
                             <li class="card">
                                 <a href="imagem.html">
-                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/carina-nebula.png' %}" alt="foto">
+                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/' %}" alt="foto">
                                 </a>
-                                <span class="card__tag">Estrelas</span>
+                                <span class="card__tag">Tag</span>
                                 <div class="card__info">
                                     <p class="card__titulo">Nome da foto</p>
                                     <div class="card__texto">
-                                        <p class="card__descricao">Fonte/fotógrafo/satélite</p>
+                                        <p class="card__descricao">Fonte/Formula 1 Oficial/F1</p>
                                         <span>
                                             <img src="{% static '/assets/ícones/1x/favorite_outline.png" alt="ícone de coração' %}">
                                         </span>
@@ -115,11 +115,11 @@
                                 <a href="imagem.html">
                                     <img class="card__imagem" src="{% static '/assets/imagens/galeria/carina-nebula.png' %}" alt="foto">
                                 </a>
-                                <span class="card__tag">Estrelas</span>
+                                <span class="card__tag">Tag</span>
                                 <div class="card__info">
                                     <p class="card__titulo">Nome da foto</p>
                                     <div class="card__texto">
-                                        <p class="card__descricao">Fonte/fotógrafo/satélite</p>
+                                        <p class="card__descricao">Fonte/Formula 1 Oficial/F1</p>
                                         <span>
                                             <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
                                         </span>
@@ -128,13 +128,13 @@
                             </li>
                             <li class="card">
                                 <a href="imagem.html">
-                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/carina-nebula.png' %}" alt="foto">
+                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/' %}" alt="foto">
                                 </a>
-                                <span class="card__tag">Estrelas</span>
+                                <span class="card__tag">Tag</span>
                                 <div class="card__info">
                                     <p class="card__titulo">Nome da foto</p>
                                     <div class="card__texto">
-                                        <p class="card__descricao">Fonte/fotógrafo/satélite</p>
+                                        <p class="card__descricao">Fonte/Formula 1 Oficial/F1</p>
                                         <span>
                                             <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
                                         </span>
@@ -149,14 +149,14 @@
     </div>
     <footer class="rodape">
         <div class="rodape__icones">
-            <a href="https://twitter.com/AluraOnline" target=”_blank” >
+            <a href="#" target=”_blank” >
                 <img src="{% static '/assets/ícones/1x/twitter.png' %}" alt="ícone twitter">
             </a>
-            <a href="https://www.instagram.com/aluraonline/" target=”_blank” >
+            <a href="https://www.instagram.com/andrad3_19/" target=”_blank” >
                 <img src="{% static '/assets/ícones/1x/instagram.png' %}" alt="ícone instagram">
             </a>
         </div>
-        <p class="rodape__texto">Desenvolvido por Alura</p>
+        <p class="rodape__texto">Desenvolvido por Keven Andrade</p>
     </footer>
 </body>
 
