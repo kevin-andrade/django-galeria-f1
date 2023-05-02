@@ -53,96 +53,23 @@
                     <div class="cards">
                         <h2 class="cards__titulo">Navegue pela galeria</h2>
                         <ul class="cards__lista">
+                            {% for fotografia in cards %}
                             <li class="card">
                                 <a href="imagem.html">
                                     <img class="card__imagem" src="{% static '/assets/imagens/galeria/mercedes-w14-frente.png' %}" alt="foto">
                                 </a>
                                 <span class="card__tag">Mercedes</span>
                                 <div class="card__info">
-                                    <p class="card__titulo">Nome da foto</p>
+                                    <p class="card__titulo">{{ fotografia.nome }}</p>
                                     <div class="card__texto">
-                                        <p class="card__descricao">Fonte/Formula 1 Oficial/F1</p>
+                                        <p class="card__descricao">{{ fotografia.legenda }}</p>
                                         <span>
                                             <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
                                         </span>
                                     </div>
                                 </div>
                             </li>
-                            <li class="card">
-                                <a href="imagem.html">
-                                    <img class="card__imagem" src="{% static '/assets/imagens/galeri/ferrari-sf75.png' %}" alt="foto">
-                                </a>
-                                <span class="card__tag">Tag</span>
-                                <div class="card__info">
-                                    <p class="card__titulo">Nome da foto</p>
-                                    <div class="card__texto">
-                                        <p class="card__descricao">Fonte/Formula 1 Oficial/F1</p>
-                                        <span>
-                                            <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
-                                        </span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="card">
-                                <a href="imagem.html">
-                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/' %}" alt="foto">
-                                </a>
-                                <span class="card__tag">Tag</span>
-                                <div class="card__info">
-                                    <p class="card__titulo">Nome da foto</p>
-                                    <div class="card__texto">
-                                        <p class="card__descricao">Fonte/Formula 1 Oficial/F1</p>
-                                        <span>
-                                            <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
-                                        </span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="card">
-                                <a href="imagem.html">
-                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/' %}" alt="foto">
-                                </a>
-                                <span class="card__tag">Tag</span>
-                                <div class="card__info">
-                                    <p class="card__titulo">Nome da foto</p>
-                                    <div class="card__texto">
-                                        <p class="card__descricao">Fonte/Formula 1 Oficial/F1</p>
-                                        <span>
-                                            <img src="{% static '/assets/ícones/1x/favorite_outline.png" alt="ícone de coração' %}">
-                                        </span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="card">
-                                <a href="imagem.html">
-                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/carina-nebula.png' %}" alt="foto">
-                                </a>
-                                <span class="card__tag">Tag</span>
-                                <div class="card__info">
-                                    <p class="card__titulo">Nome da foto</p>
-                                    <div class="card__texto">
-                                        <p class="card__descricao">Fonte/Formula 1 Oficial/F1</p>
-                                        <span>
-                                            <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
-                                        </span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="card">
-                                <a href="imagem.html">
-                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/' %}" alt="foto">
-                                </a>
-                                <span class="card__tag">Tag</span>
-                                <div class="card__info">
-                                    <p class="card__titulo">Nome da foto</p>
-                                    <div class="card__texto">
-                                        <p class="card__descricao">Fonte/Formula 1 Oficial/F1</p>
-                                        <span>
-                                            <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
-                                        </span>
-                                    </div>
-                                </div>
-                            </li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </section>
