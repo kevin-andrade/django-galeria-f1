@@ -378,7 +378,7 @@ table {
     margin-right: 1.5rem;
     border-radius: 8px;
     padding: .8rem .5rem;
-    width: 50px;
+    width: auto;
     text-align: center;
     border: 2px solid transparent;
 }
