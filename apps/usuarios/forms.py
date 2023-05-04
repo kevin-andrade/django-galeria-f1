@@ -34,7 +34,7 @@ class CadastroForms(forms.Form):
         widget= forms.TextInput(
             attrs={
                 "class": 'form-control',
-                "placeholder": 'EX.: kevinandrade'
+                "placeholder": 'Ex.: kevinandrade'
             }
         )
     )
