@@ -1,4 +1,6 @@
 from django import forms
+from django.shortcuts import redirect
+from django.contrib.auth.models import User
 
 class LoginForms(forms.Form):
     nome_login = forms.CharField(
@@ -74,3 +76,32 @@ class CadastroForms(forms.Form):
         }
         )
     )
+
+    def clean_nome_cadastro(self):
+        nome = self.cleaned_data.get("nome_cadastro")
+
+        if nome:
+            nome = nome.strip()
+            if " " in nome:
+                raise forms.ValidationError("Epaços não são permitidos nesse campo")
+            else:
+                return nome
+            
+    def clean_email(self):
+        email = self.cleaned_data.get("email")
+
+        if email:
+            if User.objects.filter(email=email).exists():
+                raise forms.ValidationError("Email já cadastrado")
+            else:
+                return email
+    
+    def clean_senha_2(self):
+        senha_1 = self.cleaned_data.get("senha_1")
+        senha_2 = self.cleaned_data.get("senha_2")
+
+        if senha_1 and senha_2:
+            if senha_1 != senha_2:
+                raise forms.ValidationError("Senhas não são iguais")
+            else:
+                return senha_2
