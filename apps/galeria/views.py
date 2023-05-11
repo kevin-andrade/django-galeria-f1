@@ -1,5 +1,8 @@
 from django.shortcuts import render, get_object_or_404
+from django.contrib import auth
+
 from apps.galeria.models import Fotografia
+from apps.galeria.forms import FotografiaForms
 
 
 def index(request):
@@ -21,3 +24,6 @@ def buscar(request):
 
     return render(request, 'galeria/buscar.html', {"cards": fotografias})
 
+def nova_imagem(request):
+    form = FotografiaForms
+    return render(request, 'galeria/nova-imagem.html', {"form": form})
