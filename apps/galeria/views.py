@@ -1,5 +1,5 @@
-from django.shortcuts import render, get_object_or_404
-from django.contrib import auth
+from django.shortcuts import redirect, render, get_object_or_404
+from django.contrib import auth, messages
 
 from apps.galeria.models import Fotografia
 from apps.galeria.forms import FotografiaForms
@@ -26,4 +26,13 @@ def buscar(request):
 
 def nova_imagem(request):
     form = FotografiaForms
+
+    if request.method == 'POST':
+        form = FotografiaForms(request.POST, request.FILES)
+
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Fotografia cadastrada com sucesso!")
+            return redirect('index')
+
     return render(request, 'galeria/nova-imagem.html', {"form": form})

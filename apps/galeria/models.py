@@ -11,6 +11,7 @@ class Fotografia(models.Model):
         ("RED BULL", 'Red Bull'),
         ("MERCEDES", 'Mercedes'),
         ("MCLAREN", 'Mclaren'),
+        ("WILLIAMS", 'Williams'),
     ]
 
     nome = models.CharField(max_length=130, blank=False, null=False)

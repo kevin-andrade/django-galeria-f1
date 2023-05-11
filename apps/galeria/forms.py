@@ -8,7 +8,8 @@ class FotografiaForms(forms.ModelForm):
         model = Fotografia
         exclude = ['publicada',]
         labels = {
-
+            "descricao": 'Descrição',
+            "usuario": 'usuario',
         }
 
         widgets = {
