@@ -36,3 +36,29 @@ def nova_imagem(request):
             return redirect('index')
 
     return render(request, 'galeria/nova-imagem.html', {"form": form})
+
+def editar_imagem(request, foto_id):
+    fotografia = Fotografia.objects.get(pk=foto_id)
+    form = FotografiaForms(instance=fotografia)
+
+    if request.method == 'POST':
+        form = FotografiaForms(request.POST, request.FILES, instance=fotografia)
+
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Fotografia editada com sucesso!")
+            return redirect("imagem")
+
+    return render(request, 'galeria/editar-imagem.html', {"form": form, "foto_id": foto_id})
+
+def deletar_imagem(request, foto_id):
+    fotografia = Fotografia.objects.get(id=foto_id)
+    fotografia.delete()
+    messages.success(request, "Fotografia deletada com sucesso!")
+
+    return redirect('index')
+
+def filtro(request, categoria):
+    fotografias = Fotografia.objects.filter(publicada=True, categoria=categoria)
+
+    return render(request, 'galeria/index.html', {"cards": fotografias})
